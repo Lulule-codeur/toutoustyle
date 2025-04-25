@@ -2,102 +2,66 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ToutouStyle 🐾</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ToutouStyle - Accessoires stylés pour chiens</title>
   <style>
     body {
-      margin: 0;
       font-family: 'Segoe UI', sans-serif;
       background: #fffaf5;
+      margin: 0;
       color: #333;
     }
     header {
       background-color: #f3e6d8;
-      padding: 20px;
+      padding: 30px;
       text-align: center;
     }
-    header h1 {
-      margin: 0;
-      font-size: 2em;
-    }
-    .hero {
-      text-align: center;
-      padding: 40px 20px;
-      background: #fff3e0;
-    }
-    .hero h2 {
-      font-size: 1.8em;
-      margin-bottom: 10px;
-    }
-    .hero p {
-      font-size: 1.1em;
-    }
-    .produit {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 40px auto;
+    .container {
+      max-width: 800px;
+      margin: auto;
       padding: 20px;
-      max-width: 500px;
-      border-radius: 12px;
-      background: #ffffff;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
     }
-    .produit img {
-      max-width: 100%;
-      border-radius: 10px;
+    h1 {
+      color: #e07a5f;
     }
-    .produit h3 {
-      margin-top: 20px;
-      font-size: 1.4em;
-    }
-    .produit p {
+    p {
       font-size: 1.1em;
-      color: #777;
     }
-    .produit a {
-      margin-top: 15px;
+    a.bouton {
       display: inline-block;
-      padding: 10px 20px;
-      background: #e07a5f;
+      margin-top: 20px;
+      padding: 10px 18px;
+      background-color: #e07a5f;
       color: white;
-      text-decoration: none;
       border-radius: 8px;
-      transition: background 0.3s;
+      text-decoration: none;
     }
-    .produit a:hover {
-      background: #d45a40;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9em;
-      background: #f5f5f5;
+    a.bouton:hover {
+      background-color: #d45a40;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>ToutouStyle 🐶</h1>
+    <h1>Bienvenue sur ToutouStyle 🐾</h1>
   </header>
 
-  <div class="hero">
-    <h2>Des accessoires stylés pour chiens stylés</h2>
-    <p>Découvre nos trouvailles affiliées pour gâter ton compagnon à 4 pattes !</p>
+  <div class="container">
+    <p>On sélectionne pour toi les meilleurs accessoires stylés et utiles pour ton chien, testés et approuvés 🐶</p>
+
+    <h2>🔥 Produit du moment</h2>
+    <p>Découvre notre sélection de <strong>fontaines à eau pour chien</strong> : confort, hygiène et design au top !</p>
+    <a href="article-fontaine.html" class="bouton">Voir le Top 3 des fontaines</a>
+
+    <h2>📝 Derniers articles</h2>
+    <ul>
+      <li><a href="article-laisses.html">5 laisses stylées à moins de 20€</a></li>
+      <li><a href="article-harnais.html">Comment bien choisir un harnais pour petit chien</a></li>
+    </ul>
+
+    <a href="blog.html" class="bouton">Accéder au blog</a>
   </div>
-
-  <section class="produit">
-    <img src="https://m.media-amazon.com/images/I/61qsiik0N8L._AC_SL1500_.jpg" alt="Fontaine à eau pour chien" />
-    <h3>Fontaine à eau silencieuse - 2L</h3>
-    <p>Hydratation propre & continue pour ton toutou. Compacte et esthétique.</p>
-    <a href="#">Acheter sur Amazon</a>
-  </section>
-
-  <footer>
-    <a href="blog.html">Lire nos articles →</a><br />
-    © 2025 ToutouStyle
-  </footer>
 
 </body>
 </html>
