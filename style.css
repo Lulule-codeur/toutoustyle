@@ -41,27 +41,45 @@ h2 {
 }
 
 /* ----------- Liens & Liste ----------- */
-ul {
-  list-style: none;
-  padding: 0;
+nav {
+  position: relative;
+  margin-bottom: 40px;
 }
 
-ul li {
-  background: #f9f4f1;
-  margin-bottom: 12px;
-  padding: 12px 16px;
-  border-radius: 8px;
-  box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+nav ul {
+  background: #fff2ea;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
-ul li a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 600;
+nav ul li {
+  margin-bottom: 15px;
+  position: relative;
+  padding-left: 25px;
 }
 
-ul li a:hover {
+nav ul li::before {
+  content: "➔";
+  position: absolute;
+  left: 0;
   color: #e07a5f;
+  font-weight: bold;
+  font-size: 1.1em;
+  top: 2px;
+}
+
+nav ul li a {
+  font-weight: 600;
+  font-size: 1.05em;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #cf6247;
+  transform: translateX(5px);
 }
 
 /* ----------- Boutons ----------- */
@@ -188,4 +206,95 @@ a.back {
 a.back:hover {
   text-decoration: underline;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+.bouton {
+  display: inline-block;
+  background-color: #e07a5f;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: bold;
+  margin: 20px 0;
+  box-shadow: 0 5px 15px rgba(224, 122, 95, 0.3);
+  transition: all 0.3s ease;
+}
+
+.bouton:hover {
+  background-color: #cf6247;
+  box-shadow: 0 8px 20px rgba(207, 98, 71, 0.4);
+  transform: translateY(-3px);
+}
+
+.bouton:active {
+  transform: scale(0.95);
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.active-link {
+  color: #b75138 !important;
+}
+.bouton-principal {
+  display: inline-block;
+  background-color: #e07a5f;
+  color: #fff;
+  padding: 14px 30px;
+  border-radius: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.bouton-principal:hover {
+  background-color: #cf6247;
+}
+
+.product-rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: Arial, sans-serif;
+}
+
+.stars {
+  display: flex;
+}
+
+.star {
+  font-size: 24px;
+  color: gold;
+  position: relative;
+}
+
+.star::before {
+  content: '★';
+}
+
+.star.half::before {
+  content: '★';
+  background: linear-gradient(90deg, gold 50%, lightgray 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.star.empty::before {
+  content: '☆';
+}
+
+.rating-text {
+  font-size: 14px;
+  color: #555;
+}
+
 
